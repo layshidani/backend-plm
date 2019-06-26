@@ -30,3 +30,19 @@ por:
 ```js
 const sequelize = new Sequelize('sqlite://database.sqlite');
 ```
+
+---
+
+[Documentação sequelize >>> migration >>> Creating first model](http://docs.sequelizejs.com/manual/migrations.html#creating-first-model--and-migration-)
+
+Cria o banco de dados:
+
+```shell
+npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+```
+
+abre o DBeaver
+
+* Clica em **new database conection**, 
+* Seleciona **SQLite**
+* Seleciona a pasta do projeto
