@@ -59,6 +59,10 @@ npx sequelize-cli model:generate --name Products --attributes name:string,price:
 npx sequelize-cli model:generate --name Orders --attributes status:string
 ```
 
+## Criar banco de dados *OrdersProducts*
+```shell
+npx sequelize-cli model:generate --name OrdersProducts --attributes orderId:string,productId:string
+```
 ---
 
 ## Associações
