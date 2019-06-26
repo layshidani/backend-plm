@@ -1,4 +1,4 @@
-Instalações e configuração inicial
+# Instalações e configuração inicial
 
 ```shell
 npm init
@@ -35,7 +35,7 @@ const sequelize = new Sequelize('sqlite://database.sqlite');
 
 [Documentação sequelize >>> migration >>> Creating first model](http://docs.sequelizejs.com/manual/migrations.html#creating-first-model--and-migration-)
 
-Cria o banco de dados:
+## Cria o banco de dados:
 
 ```shell
 npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
@@ -46,3 +46,21 @@ abre o DBeaver
 * Clica em **new database conection**, 
 * Seleciona **SQLite**
 * Seleciona a pasta do projeto
+
+## Criar banco de dados *Products*
+(não incluir id, nem espaço entre as vírgulas)
+
+```shell
+npx sequelize-cli model:generate --name Products --attributes name:string,price:string,order:integer
+```
+
+## Criar banco de dados *Orders*
+```shell
+npx sequelize-cli model:generate --name Orders --attributes status:string
+```
+
+---
+
+## Associações
+
+[Docs](http://docs.sequelizejs.com/manual/associations.html)

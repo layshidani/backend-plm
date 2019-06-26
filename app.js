@@ -5,7 +5,7 @@ const db = require('./models/index');
 
 app.get('/', (req, resp) => {
   // resposta
-  resp.send('>>> Legal! <<<')
+  resp.send('>>> Foi! <<<')
 });
 
 
