@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Orders.associate = function(models) {
     // associations can be defined here
-    Orders.belongsTo(models.User, {foreign: 'uid'});
+    Orders.belongsTo(models.User, {foreignKey: 'uid'});
     Orders.hasMany(models.OrderProducts, {foreignKey: 'orderId'});
     
   };

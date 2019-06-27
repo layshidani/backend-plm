@@ -16,7 +16,9 @@ const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 ```
 
-Substituir:
+e
+
+Substituir o código abaixo:
 ```js
 let sequelize;
 if (config.use_env_variable) {
@@ -35,7 +37,8 @@ const sequelize = new Sequelize('sqlite://database.sqlite');
 
 [Documentação sequelize >>> migration >>> Creating first model](http://docs.sequelizejs.com/manual/migrations.html#creating-first-model--and-migration-)
 
-## Cria o banco de dados:
+## Criar o banco de dados *User*:
+(não incluir id, nem espaço entre as vírgulas)
 
 ```shell
 npx sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
@@ -48,7 +51,6 @@ abre o DBeaver
 * Seleciona a pasta do projeto
 
 ## Criar banco de dados *Products*
-(não incluir id, nem espaço entre as vírgulas)
 
 ```shell
 npx sequelize-cli model:generate --name Products --attributes name:string,price:string,order:integer
@@ -59,9 +61,9 @@ npx sequelize-cli model:generate --name Products --attributes name:string,price:
 npx sequelize-cli model:generate --name Orders --attributes status:string
 ```
 
-## Criar banco de dados *OrdersProducts*
+## Criar banco de dados *OrderProducts*
 ```shell
-npx sequelize-cli model:generate --name OrdersProducts --attributes orderId:string,productId:string
+npx sequelize-cli model:generate --name OrderProducts --attributes orderId:integer,productId:integer
 ```
 ---
 
