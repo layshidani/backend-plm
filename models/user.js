@@ -9,5 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     User.hasMany(models.Orders, { foreignKey: 'uid' });
   };
+
+  // User.create({firstName: 'test2', email: 'test2@test.com'})
   return User;
 };
