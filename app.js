@@ -9,8 +9,10 @@ app.get('/', (req, resp) => {
 });
 
 
-app.listen(3001, () => {
+app.listen(2019, () => {
   console.log('>>>Rodando<<<');
-})
+});
+
+app.use('/users', require('./routes/user'));
 
 db.sequelize.sync();
