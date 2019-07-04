@@ -6,7 +6,6 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   
   OrderProducts.associate = function(models) {
-    // associations can be defined here
     OrderProducts.belongsTo(models.Products, {foreignKey: 'productId'});
     OrderProducts.belongsTo(models.Orders, {foreignKey: 'orderId'});
   };
