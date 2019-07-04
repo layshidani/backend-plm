@@ -32,7 +32,7 @@ router.get('/:id', (req, res) => {
 //   });
 // })
 
-router.post('/', (req, resp) => {
+router.post('/', (req, res) => {
   User.create(req.body)
   .then(user => {
     res.status(201).send(user);
