@@ -4,18 +4,19 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING,
     uid: DataTypes.INTEGER
   }, {});
-  Orders.associate = function(models) {
-    Orders.belongsTo(models.User, {foreignKey: 'uid'});
-    Orders.hasMany(models.OrderProducts, {foreignKey: 'orderId'});
-    
+  Orders.associate = function (models) {
+    Orders.belongsTo(models.User, { foreignKey: 'uid' });
+    Orders.hasMany(models.OrderProducts, { foreignKey: 'orderId' });
+
   };
-  
-  // Orders.bulkCreate(
+
+  // Orders.create(
   //   {
-  //     status: 'Cozinha',
-  //     uid: 1
+  //     "uid": 35,
+  //     "status": "COZINHA",
+  //     "OrderProducts": [{ "productId": 58 }, { "productId": 60 }]
   //   }
-  //   )
+  // )
 
   return Orders;
 };

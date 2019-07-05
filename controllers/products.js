@@ -15,7 +15,7 @@ const getProductsById = (req, res) => {
   })
     .then(() => {
       Products.findByPk(req.params.id)
-        .then(Product => res.send(Product))
+        .then(product => product ? res.send(product) : res.sendStatus(404))
     })
 };
 

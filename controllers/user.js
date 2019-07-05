@@ -11,8 +11,8 @@ const getUser = (req, res) => {
 
 const getUserById = (req, res) => {
   User.findOne({ where: { id: req.params.id } })
-    .then(user => {
-      res.send(user);
+    .then(user => { user ? 
+      res.send(user)  : res.sendStatus(404);
     })
 };
 
